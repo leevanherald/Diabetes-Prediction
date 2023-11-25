@@ -1,0 +1,63 @@
+{% load static %}
+
+<html>
+<head>
+<meta name="viewport" content="with=device-width, initial-scale=1.0">
+<title>Diabetes Prediction</title>
+<link rel="stylesheet" type="text/css" href="{% static '/DP/style.css' %}?v={{ timestamp }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" >
+<style>
+    html{
+    zoom:100%;
+}
+
+
+</style>
+</head>
+<body>
+<section class="header">
+<nav>
+<!-- <a href="medico.html"><img src="images/logo1.png"></a> -->
+<div class="nav-links" id="navLinks">
+<i class="fa fa-times" onclick="hidemenu()"></i>
+<ul>
+<li><a href="{% url 'medico' %}">HOME</a><li>
+<li><a href="medico.html#ab">ABOUT</a><li>
+<li><a href="medico.html#ds">DISEASE</a><li>
+<!-- <li><a href="ieee.html">IEEE PAPER</a><li> -->
+<li><a href="medico.html#contactus">CONTACT</a><li>
+</ul>
+<i class="fa fa-bars" onclick="showmenu()"></i>
+</nav>
+<h1 class="diabetes-h1">Diabetes Prediction</h1><br><br>
+<section class="form1">
+    
+    <form action="result" class="form" autocomplete="on">
+    <fieldset><legend>Diabetes</legend>
+        <label for="field1"><span>Gender ( 0 - male, 1 - Female ) <span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field1" value="1" /></label><br>
+        <label for="field2"><span>Age <span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field2" value="55" /></label><br>
+        <label for="field3"><span>Urea ( mmol )<span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field3" value="4.5" /></label><br>
+        <label for="field4"><span>Creatinine ratio (Cr) ( µmol/L )<span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field4" value="34" /></label><br>
+        <label for="field5"><span>Hemoglobin A1C ( mmol/mol ) <span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field5" value="10.4" /></label><br>
+        <label for="field6"><span>Cholesterol ( mmol/L )<span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field7" value="2.5" /></label><br><br>
+        <label for="field7"><span>Triglycerides ( mg/dL ) <span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field8" value="0.2" /></label><br><br>
+        <label for="field8"><span>High-density lipoprotein ( mg/dL )<span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field9" value="3.4" /></label><br>
+        <label for="field9"><span>Low-density lipoprotein ( mg/dL )<span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field10" value="1.1" /></label><br>
+        <label for="field10"><span>Very low-density lipoprotein ( mg/dL ) <span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field11" value="28.36" /></label><br>
+        <label for="field11"><span>BMI ( kg/m2 )<span class="required">*</span></span><input type="floatformat" pattern="[0-9]+(\.[0-9]{1,5})?%?" title="Please Enter Only Numbers" required class="input-field" name="field6" value="4.7" /></label><br>
+
+        <input type="submit"><br>
+        <div class="result-msg">Result : {{ result2 }} </div>
+
+    </fieldset>
+
+    </form>
+</section>
+
+</section>

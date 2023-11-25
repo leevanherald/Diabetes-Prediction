@@ -1,0 +1,170 @@
+{% load static %}
+
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/DP/style.css' %}?v={{ timestamp }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <!-- <a href="medico.html"><img src="images/logo1.png"></a> -->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a>
+                    <li>
+                    <li><a href="#ab">ABOUT</a>
+                    <li>
+                    <li><a href="#ds">DISEASE</a>
+                    <li>
+                    <!-- <li><a href="ieee.html">IEEE PAPER</a>
+                    <li> -->
+                    <li><a href="#contactus">CONTACT</a>
+                    <li>
+                </ul>
+                <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1> Diabetes Prediction </h1>
+            <p> Predict your risk of Diabetes by <br>typing in your health
+                parameters </p>
+            <a href="#ds" class="hero-btn">Click here to Calculate your Risk</a>
+    </section>
+
+    <!--Diseases-->
+    <section class="bg">
+        <section class="disease" id="ds">
+            <h1> Choose the Disease to check your risk </h1>
+
+            <div class="row">
+                <a href="{% url 'diabetes' %}" class="btn2">
+                    <div class="disease-col hero-btn">
+                        <h3> Diabetes </h3>
+                        <p> Click here to check risk for Diabetes</p>
+                    </div></a>
+                <!-- <a href="liver.html" class="btn2">
+                    <div class="disease-col hero-btn">
+                        <h3> Liver Diseases </h3>
+                        <p> Click here to check risk for liver disease</p>
+                    </div>
+                </a>
+                <a href="heart.html" class="btn2">
+                    <div class="disease-col hero-btn">
+                        <h3> Cardiovascular Diseases </h3>
+                        <p> Click here to check risk for cardiovascular disease</p>
+                    </div>
+                </a> -->
+            </div>
+        </section>
+
+        <!<iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d800612.4540173218!2d140.31675430700892!3d38.38617521775546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8892ddfbe0dc71%3A0xce6fb9385107a4ad!2sMiyagi%2C%20Japan!5e0!3m2!1sen!2sin!4v1683008929051!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            >
+            <section class="about" id="ab">
+                <h2> About Our Project </h2>
+                <p> With the modernization in lifestyle of human beings especially in urban areas there is a lack in
+                    physical activities, therefore diseases related to diabetes have become more common nowadays.
+                    Diabetes causes millions of deaths every year. With such a large number of people infected
+                    with this disease we need to come up with a possible solution. Problems related to this diseases
+                    are not detected in early stages as they will be functioning normally even if they are partially
+                    damaged. Our model will help us to predict the risk of this diseases beforehand, which will increase
+                    the survival rate of patients. <br><br>
+                    We have experienced that many people do their regular blood test but are unaware of the risk of
+                    disease, health parameters that may be coming on the boundary in their blood report.<br><br>
+                    Just type in your health parameters and predict your risk for the disease <br><br>We will
+                    also be providing advice on the precations you need to take according to your risk , so you can
+                    maintain your health.</p>
+                <div class="row-2">
+                    <div class="about-col">
+                        <img src="{% static '/DP/images/heart.jpg' %}">
+                        <div class="layer">
+                            <h3>Save Your Heart</h3>
+                        </div>
+                    </div>
+                    <!-- <div class="about-col">
+                        <img src="images/liver.jpg">
+                        <div class="layer">
+                            <h3>Save Your Liver</h3>
+                        </div>
+                    </div> -->
+                    <div class="about-col">
+                        <img src="{% static '/DP/images/life.jpg'%}">
+                        <div class="layer">
+                            <h3>Save Your Life</h3>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+            </section>
+
+            <section class="prediction">
+                <h3>Our Predictions</h3>
+                <div class="row">
+                    <!-- <div class="prediction-col">
+                        <img src="images/liver1.jpg">
+                        <h3>Checking your risk for liver dieseases</h3>
+                        <p>Our Machine Learning Algortihm can predict your risk for liver diseases</p>
+                    </div> -->
+                    <div class="prediction-col">
+                        <img src="{% static '/DP/images/diabetes.jpg' %}">
+                        <h3>Checking your risk for Diabetes</h3>
+                        <p>Our Machine Learning Algortihm can predict your risk for Diabetes</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--call to action-->
+
+            <section class="cta">
+                <h1>Have any problems using our website?</h1>
+                <a href="tel:7498412078" class="hero-btn">CONTACT US</a>
+            </section>
+
+            <!--footer-->
+            <section class="footer" id="contactus">
+                <h4> About Us</h4>
+                <p>
+                    Group 6 SY CS-C, Vishwakarma Institute Of Technology<br>
+                </p>
+                <div class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+
+
+            </section>
+    </section>
+
+    <!--Javascript for Toggle Menu-->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

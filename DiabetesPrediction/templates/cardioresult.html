@@ -1,0 +1,131 @@
+<html>
+<head>
+<meta name="viewport" content="with=device-width, initial-scale=1.0">
+<title>Cardio Vascular Result</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" >
+</head>
+<body>
+<section class="header">
+<nav>
+<a href="medico.html"><img src="images/logo1.png"></a>
+<div class="nav-links" id="navLinks">
+<i class="fa fa-times" onclick="hidemenu()"></i>
+<ul>
+<li><a href="medico.html">HOME</a><li>
+<li><a href="#ab">ABOUT</a><li>
+<li><a href="medico.html#ds">DISEASE</a><li>
+<li><a href="ieee.html">IEEE PAPER</a><li>
+<li><a href="#contactus">CONTACT</a><li>
+</ul>
+<i class="fa fa-bars" onclick="showmenu()"></i>
+</nav>
+<div class="text-box">
+<h1> Result </h1>
+<p> You are in risk of catching the disease </p>
+<a href="#tr" class="hero-btn">Click here to Calculate your Risk</a>
+</section>
+
+
+<!--Diseases-->
+<section class="treatment" id="tr">
+    <h1> Heart Disease Treatment </h1>
+    <h3>There are several types of treatments for cardiovascular diseases, which include:   </h3>
+    <ol class="c">
+        <li>Lifestyle changes: Lifestyle modifications such as a healthy diet, regular exercise, and smoking cessation can help prevent and manage cardiovascular diseases.</li>
+        <li>Medications: Depending on the type and severity of the cardiovascular disease, your doctor may prescribe medications such as blood pressure-lowering medications, cholesterol-lowering drugs, antiplatelet drugs, and anticoagulants.</li>
+        <li>Procedures: Certain procedures such as angioplasty, stenting, and bypass surgery can improve blood flow to the heart and reduce the risk of complications.</li>
+        <li>Implantable devices: Implantable devices such as pacemakers and implantable cardioverter-defibrillators (ICDs) can help regulate heart rate and rhythm in people with certain cardiovascular diseases.</li>
+        <li>Cardiac rehabilitation: Cardiac rehabilitation programs offer a structured exercise program, education on managing cardiovascular disease, and support for lifestyle changes.</li>
+        <li>Heart transplant: In severe cases of heart failure, a heart transplant may be necessary to replace a damaged heart with a healthy one.</li>
+    </ol>
+
+    <h3>Please note :</h3><br>
+    <p>It's important to note that the treatment options for cardiovascular disease will vary depending on the individual's specific condition and medical history. Therefore, it's essential to consult with a doctor or healthcare professional to determine the most appropriate treatment plan for your individual needs.</p>
+
+</section>
+
+<section class="about" id="ab">
+<h2> About Our Project </h2>
+<p> With the modernization in lifestyle of human beings especially in urban areas there is a lack in physical activities, therefore diseases related to liver and heart have become more common nowadays. Liver diseases causes millions of deaths every year. With such a large number of people infected with these diseases we need to come up with a possible solution. Problems related to these diseases are not detected in early stages as they will be functioning normally even if they are partially damaged.Our model will help us to predict the risk of these diseases beforehand, which will increase the survival rate of patients. <br><br>
+    We have experienced that many people do their regular blood test but are unaware of the risk of diseases, of health parameters that may be coming on the boundary in their blood report.<br><br> Just type in the values of your blood report and predict your risk for the diseases <br><br>We will also be providing advice on the precations you need to take according to your risk , so you can maintain your health.</p>
+<div class="row">
+<div class="about-col">
+<img src="images/heart.jpg">
+<div class="layer">
+    <h3>Save Your Heart</h3>
+</div>
+</div>
+<div class="about-col">
+    <img src="images/liver.jpg">
+    <div class="layer">
+        <h3>Save Your Liver</h3>
+    </div>
+    </div>
+    <div class="about-col">
+        <img src="images/life.jpg">
+        <div class="layer">
+            <h3>Save Your Life</h3>
+        </div>
+        </div>
+</div>
+<a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+</section>
+
+<section class="prediction">
+        <h3>Our Predictions</h3>
+        <div class="row">
+        <div class="prediction-col">
+            <img src="images/liver1.jpg">
+            <h3>Checking your risk for liver dieseases</h3>
+            <p>Our Machine Learning Algortihm can predict your risk for liver diseases</p>
+        </div>
+        <div class="prediction-col">
+            <img src="images/heart1.png">
+            <h3>Checking your risk for Cardio Vascular dieseases</h3>
+            <p>Our Machine Learning Algortihm can predict your risk for heart diseases</p>
+        </div>
+    </div>
+
+</section>
+
+<!--call to action-->
+
+<section class="cta" >
+    <h1>Have any problems using our website?</h1>
+    <a href="tel:7498412078"class="hero-btn">CONTACT US</a>
+</section>
+
+<!--footer-->
+<section class="footer" id="contactus">
+    <h4> About Us</h4>
+    <p>
+        We are a group of first years from the Division K in Vishwakarma Institute Of Technology<br>
+    </p>
+    <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+    </div>
+    
+    
+</section>
+   
+<!--Javascript for Toggle Menu-->
+<script>
+var navLinks=document.getElementById("navLinks");
+function showMenu(){
+navLinks.style.right= "0";
+}
+function hideMenu(){
+navLinks.style.right= "-200px";
+}
+</script>
+</body>
+</html>
